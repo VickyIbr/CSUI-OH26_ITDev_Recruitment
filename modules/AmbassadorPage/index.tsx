@@ -5,7 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Book, Contact, Search } from "lucide-react";
 import HerosecPilarl from '@/public/herosec_pilar-l.svg';
 import HerosecPilarr from '@/public/herosec_pilar-r.svg';
+import AmbassadorsecKristall from '@/public/ambassadorsec_kristall.svg';
+import AmbassadorsecKristalr from '@/public/ambassadorsec_kristalr.svg';
 import AmbassadorsecPanda from '@/public/ambassadorsec_panda.svg';
+import AmbassadorsecArchive from '@/public/ambassadorsec_archive.svg';
+import AmbassadorsecArchiveMd from '@/public/ambassadorsec_archive_md.svg';
 import AmbassadorCard from "./components/ambassadorcard";
 import AmbassadorBoard from "./components/ambassadorboard";
 import Image from "next/image";
@@ -145,6 +149,58 @@ export default function LandingPage() {
               ></Image>
             </div>
           </div>
+        </section>
+
+        <section className="flex w-full items-center justify-center relative overflow-hidden">
+          <Image
+            src={AmbassadorsecKristall}
+            alt=""
+            className="
+             translate-y-[70%]
+              absolute
+              left-0
+              bottom-0
+              h-[50%]
+              w-auto
+              max-w-none
+              -translate-x-[40%]
+              md:-translate-x-[30%]
+              lg:translate-x-0
+            "
+          />
+
+          <Image
+            src={AmbassadorsecKristalr}
+            alt=""
+            className="
+            translate-y-[70%]
+            absolute
+            right-0
+            bottom-0
+            h-[50%]
+            w-auto
+            max-w-none
+            translate-x-[40%]
+            md:translate-x-[30%]
+            lg:translate-x-0
+          "
+          />
+          <div className="flex flex-col items-center justify-center gap-8 pb-20  md:max-w-4xl max-w-sm z-10">
+            <h1 className="font-league-spartan text-center font-bold md:text-h1 text-h5 text-neutral-100">Ambassador 2025’s Archive</h1>
+            <Image
+              src={AmbassadorsecArchive}
+              alt=""
+              className="block md:hidden"
+            >
+            </Image>
+            <Image
+              src={AmbassadorsecArchiveMd}
+              alt=""
+              className="hidden md:block"
+            >
+            </Image>
+          </div>
+
         </section>
       </div>
 
