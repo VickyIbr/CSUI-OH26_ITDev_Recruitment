@@ -1,7 +1,7 @@
 import { DemoSection } from "../shared/demo-section";
 import { ComponentPreview } from "../shared/component-preview";
 import { CodeBlock } from "../shared/code-block";
-import Footer from "~/components/elements/Footer";
+// import Footer from "~/components/elements/Footer";
 
 export function FooterDemo() {
   return (
@@ -12,7 +12,7 @@ export function FooterDemo() {
     >
       <ComponentPreview>
         <div className="bg-background relative w-full overflow-hidden rounded-md border">
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </ComponentPreview>
       <CodeBlock
