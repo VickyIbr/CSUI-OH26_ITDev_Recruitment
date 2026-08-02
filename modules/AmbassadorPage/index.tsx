@@ -1,6 +1,7 @@
 "use client";
 
 import Countdown from "@/components/elements/Countdown";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "~/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Book, Contact, Search } from "lucide-react";
 import HerosecPilarl from '@/public/herosec_pilar-l.svg';
@@ -10,6 +11,7 @@ import AmbassadorsecKristalr from '@/public/ambassadorsec_kristalr.svg';
 import AmbassadorsecPanda from '@/public/ambassadorsec_panda.svg';
 import AmbassadorsecArchive from '@/public/ambassadorsec_archive.svg';
 import AmbassadorsecArchiveMd from '@/public/ambassadorsec_archive_md.svg';
+import NMHsecPanda from '@/public/nmhsec_panda.svg';
 import AmbassadorCard from "./components/ambassadorcard";
 import AmbassadorBoard from "./components/ambassadorboard";
 import Image from "next/image";
@@ -151,7 +153,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="flex w-full items-center justify-center relative overflow-hidden">
+        <section className="flex w-full items-center justify-center relative ">
           <Image
             src={AmbassadorsecKristall}
             alt=""
@@ -202,8 +204,50 @@ export default function LandingPage() {
           </div>
 
         </section>
-      </div>
+        <section className="flex w-full items-center justify-center">
+          <div className="flex flex-col items-center justify-center gap-15 py-20 md:max-w-7xl max-w-sm">
+            <div className="flex flex-col items-center justify-center gap-6 z-10">
+              <h1 className="font-league-spartan text-center font-bold md:text-h1 text-h4 text-neutral-100">Need More Help?</h1>
+              <p className="font-aileron text-b7 md:text-s4 font-bold text-neutral-100 text-center">"Temukan berbagai pertanyaan serta jawaban seputar ambassador di sini"</p>
+            </div>
+            <div className="flex items-start justify-center gap-25 md:px-5 lg:p-0">
+              <Accordion type="single" defaultValue="item-1" >
+                <AccordionItem value="item-1">
+                  <AccordionTrigger >Apa aja benefit daftar Ambassador?</AccordionTrigger>
+                  <AccordionContent>Sebagai Ambassador, kamu akan terlibat langsung dalam promosi OH Fasilkom, berkesempatan membangun relasi dengan teman-teman dari seluruh Indonesia, mendapatkan akses ke program eksklusif seperti webinar dan mentoring, serta memperluas wawasan seputar teknologi, bisnis digital, dan masa depan industri IT.</AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger >Bagaimana jika aku memiliki kesibukan lain dan ingin mendaftar?</AccordionTrigger>
+                  <AccordionContent>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, recusandae! Fugit nobis, cupiditate sint pariatur officiis in! Iure repellendus magni natus deserunt minima, laborum ducimus explicabo optio nostrum fuga aut!</AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger >Harus bisa ngedit video gak kak?</AccordionTrigger>
+                  <AccordionContent>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, recusandae! Fugit nobis, cupiditate sint pariatur officiis in! Iure repellendus magni natus deserunt minima, laborum ducimus explicabo optio nostrum fuga aut!</AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger >Aku dari luar Jabodetabek, bisa ikut juga gak?</AccordionTrigger>
+                  <AccordionContent>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, recusandae! Fugit nobis, cupiditate sint pariatur officiis in! Iure repellendus magni natus deserunt minima, laborum ducimus explicabo optio nostrum fuga aut!</AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-5">
+                  <AccordionTrigger >Apakah program ini berbayar?</AccordionTrigger>
+                  <AccordionContent>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, recusandae! Fugit nobis, cupiditate sint pariatur officiis in! Iure repellendus magni natus deserunt minima, laborum ducimus explicabo optio nostrum fuga aut!</AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-6">
+                  <AccordionTrigger >Harus terkenal ya kak?</AccordionTrigger>
+                  <AccordionContent>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, recusandae! Fugit nobis, cupiditate sint pariatur officiis in! Iure repellendus magni natus deserunt minima, laborum ducimus explicabo optio nostrum fuga aut!</AccordionContent>
+                </AccordionItem>
+              </Accordion>
+              <Image
+                src={NMHsecPanda}
+                alt="Ambas"
+                className="hidden md:block shrink-0"
+              ></Image>
+            </div>
 
-    </main>
+          </div>
+        </section>
+      </div >
+
+    </main >
   );
 }
