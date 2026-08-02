@@ -24,7 +24,7 @@ export default function AmbassadorBoard({
                 <div
                     className="
             absolute
-            top-8
+            top-7
             md:top-6
             left-0
             right-0
@@ -65,7 +65,8 @@ export default function AmbassadorBoard({
                 <div
                     className="
             absolute
-            top-0
+            -top-4
+            md:top-0
             left-0
             right-0
             h-4

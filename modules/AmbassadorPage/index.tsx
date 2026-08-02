@@ -3,7 +3,7 @@
 import Countdown from "@/components/elements/Countdown";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "~/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { Book, Contact, Search } from "lucide-react";
+import { Book, Contact, MessageCircle, Search } from "lucide-react";
 import HerosecPilarl from '@/public/herosec_pilar-l.svg';
 import HerosecPilarr from '@/public/herosec_pilar-r.svg';
 import AmbassadorsecKristall from '@/public/ambassadorsec_kristall.svg';
@@ -12,14 +12,17 @@ import AmbassadorsecPanda from '@/public/ambassadorsec_panda.svg';
 import AmbassadorsecArchive from '@/public/ambassadorsec_archive.svg';
 import AmbassadorsecArchiveMd from '@/public/ambassadorsec_archive_md.svg';
 import NMHsecPanda from '@/public/nmhsec_panda.svg';
+import FAQsecPanda from '@/public/faqsec_panda.svg';
 import AmbassadorCard from "./components/ambassadorcard";
 import AmbassadorBoard from "./components/ambassadorboard";
+import ImageSparkle from "@/public/sparkle.svg"
 import Image from "next/image";
 
 export default function LandingPage() {
   return (
-    <main className="min-h-screen bg-[linear-gradient(180deg,_#040F27_13.94%,_#0C265E_52.4%,_#3F178D_100%)]">
-      <div className="mt-20 flex flex-col items-center justify-center gap-10">
+    <main>
+
+      <div className="bg-[linear-gradient(180deg,#040F27_13.94%,#0C265E_52.4%,#3F178D_100%)] w-full mt-20 flex flex-col items-center justify-center gap-10 ">
         <section className="flex w-full items-center justify-center relative">
           <Image
             src={HerosecPilarl}
@@ -152,13 +155,22 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-
-        <section className="flex w-full items-center justify-center relative ">
+      </div>
+      <div
+        className="
+          bg-[linear-gradient(180deg,#3F178D_15.38%,#99B5F2_68.99%,#C0D2F8_100%)] w-full flex flex-col items-center justify-center gap-10"
+      >
+        <section className="flex w-full items-center justify-center relative gap-15 py-8 md:pt-30 md:pb-20 ">
+          <Image
+            src={ImageSparkle}
+            alt=""
+            className="absolute inset-0 top-0 h-full w-auto object-cover pointer-events-none select-none translate-x-[-70%] md:translate-x-[-40%]"
+          />
           <Image
             src={AmbassadorsecKristall}
             alt=""
             className="
-             translate-y-[70%]
+             translate-y-[50%]
               absolute
               left-0
               bottom-0
@@ -175,7 +187,7 @@ export default function LandingPage() {
             src={AmbassadorsecKristalr}
             alt=""
             className="
-            translate-y-[70%]
+            translate-y-[50%]
             absolute
             right-0
             bottom-0
@@ -208,7 +220,7 @@ export default function LandingPage() {
           <div className="flex flex-col items-center justify-center gap-15 py-20 md:max-w-7xl max-w-sm">
             <div className="flex flex-col items-center justify-center gap-6 z-10">
               <h1 className="font-league-spartan text-center font-bold md:text-h1 text-h4 text-neutral-100">Need More Help?</h1>
-              <p className="font-aileron text-b7 md:text-s4 font-bold text-neutral-100 text-center">"Temukan berbagai pertanyaan serta jawaban seputar ambassador di sini"</p>
+              <p className="font-aileron text-s7 md:text-s4 font-bold text-neutral-100 text-center">"Temukan berbagai pertanyaan serta jawaban seputar ambassador di sini"</p>
             </div>
             <div className="flex items-start justify-center gap-25 md:px-5 lg:p-0">
               <Accordion type="single" defaultValue="item-1" >
@@ -243,10 +255,35 @@ export default function LandingPage() {
                 className="hidden md:block shrink-0"
               ></Image>
             </div>
-
           </div>
         </section>
-      </div >
+        <section className="flex w-full items-center justify-center">
+          <div className="flex flex-col items-center justify-center gap-16 py-20 md:max-w-7xl max-w-sm">
+            <div className="flex flex-col items-center justify-center gap-6 z-10">
+              <h1 className="font-league-spartan text-center font-bold md:text-h1 text-h4 text-primary-80 md:text-neutral-100">Butuh bantuan atau punya pertanyaan lain?</h1>
+              <p className="font-aileron text-s7 md:text-s4 font-bold text-primary-80 md:text-neutral-100 text-center">Kamu dapat hubungi kontak di bawah ini untuk informasi lebih lnajut ya!</p>
+            </div>
+
+            <Image
+              src={FAQsecPanda}
+              alt="Ambas"
+              className=" shrink-0"
+            ></Image>
+            <div className="flex items-center justify-center gap-4">
+              <Button variant="primary">
+                <MessageCircle></MessageCircle>
+                <p className="font-aileron text-s9 md:text-s7 font-bold text-neutral-100 text-center">Contact Person</p>
+              </Button>
+              <Button variant="primary">
+                <MessageCircle></MessageCircle>
+                <p className="font-aileron text-s9 md:text-s7 font-bold text-neutral-100 text-center">Contact Person</p>
+              </Button>
+
+            </div>
+          </div>
+
+        </section>
+      </div>
 
     </main >
   );
