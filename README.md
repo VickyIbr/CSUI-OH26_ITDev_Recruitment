@@ -1,40 +1,58 @@
+# Open House Fasilkom UI 2026
+
+Landing page implementation for the Open House Fasilkom UI 2026 IT Development recruitment task.
+
+## Tech Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Bun
+
 ## Getting Started
-Hello future IT Developers!
-This is the repo which you'll clone and work on for the next week.
 
-Copy and run these commands to get the repo up and running on your machine.
+Clone the repository.
 
-First, you clone and remove the remote uri to the remote repo.
 ```bash
-git clone https://github.com/JocimSus/oh26rec-template
-cd oh26rec-template/
-git remote remove origin
+git clone https://github.com/VickyIbr/oh26rec-template.git
+cd oh26rec-template
 ```
 
-Then, you create a new repo on your account.
-![](https://zip.jocimsus.tech/u/oTMVB5.png)
+Install dependencies.
 
-After that, copy the uri of the newly made repo.
-![](https://zip.jocimsus.tech/u/uEWNNm.png)
-
-After getting your own repo's url run these commands
 ```bash
-git remote add origin YOUR_REPOSITORY_URL
-git add .
-git commit -m "Level 0: Clone Repo"
-git push -u origin main 
+bun install
 ```
 
-Finally, run the development server:
+Run the development server.
+
 ```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `@/modules/AmbassadorPage/index.tsx`. The page auto-updates as you edit the file.
+## Build
 
-## Deploy on Vercel
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+bun run build
+bun start
+```
 
-Check out [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Structure
+
+```
+app/
+components/
+public/
+```
+
+## Deployment
+
+The project is deployed on Vercel.
+
+Live Demo: https://oh.vickyibr.my.id
+
+## Notes
+
+This project was built by implementing the provided Figma design with a responsive layout while maintaining consistency with the given design system.
