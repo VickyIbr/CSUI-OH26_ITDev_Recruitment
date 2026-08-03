@@ -39,17 +39,7 @@ bun run build
 bun start
 ```
 
-## Project Structure
-
-```
-app/
-components/
-public/
-```
-
 ## Deployment
-
-The project is deployed on Vercel.
 
 Live Demo: https://oh.vickyibr.my.id
 
